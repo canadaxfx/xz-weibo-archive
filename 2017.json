@@ -204,11 +204,11 @@
         "date": "2017-12-06",
         "month": "December",
         "year": "2017",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "category": "screenshot",
-        "groupName": "201712"
+        "groupName": "201712",
+        "weibo": "",
+        "note": ""
     },
     {
         "id": 271,
@@ -3397,11 +3397,11 @@
         "date": "2017-01-12",
         "month": "January",
         "year": "2017",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "category": "screenshot",
-        "groupName": "201701"
+        "groupName": "201701",
+        "weibo": "",
+        "note": ""
     },
     {
         "id": 18,

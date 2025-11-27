@@ -537,11 +537,11 @@
         "date": "2016-12-10",
         "month": "December",
         "year": "2016",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "groupName": "201612",
-        "category": "screenshot"
+        "category": "screenshot",
+        "weibo": "",
+        "note": ""
     },
     {
         "id": 197,
@@ -1322,9 +1322,7 @@
         "date": "2016-08-12",
         "month": "August",
         "year": "2016",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "groupName": "201608",
         "category": "screenshot",
         "weibo": "",
@@ -1460,11 +1458,11 @@
         "date": "2016-07-08",
         "month": "July",
         "year": "2016",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "groupName": "201607",
-        "category": "screenshot"
+        "category": "screenshot",
+        "weibo": "",
+        "note": ""
     },
     {
         "id": 120,
@@ -1818,9 +1816,7 @@
         "date": "2016-05-20",
         "month": "May",
         "year": "2016",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "groupName": "201605",
         "category": "screenshot",
         "weibo": "",
@@ -2004,11 +2000,11 @@
         "date": "2016-05-10",
         "month": "May",
         "year": "2016",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "groupName": "201605",
-        "category": "screenshot"
+        "category": "screenshot",
+        "weibo": "",
+        "note": ""
     },
     {
         "id": 76,
@@ -2164,11 +2160,11 @@
         "date": "2016-04-22",
         "month": "April",
         "year": "2016",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "groupName": "201604",
-        "category": "screenshot"
+        "category": "screenshot",
+        "weibo": "",
+        "note": ""
     },
     {
         "id": 66,
@@ -2432,11 +2428,11 @@
         "date": "2016-03-30",
         "month": "March",
         "year": "2016",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "groupName": "201603",
-        "category": "screenshot"
+        "category": "screenshot",
+        "weibo": "",
+        "note": ""
     },
     {
         "id": 44,
@@ -2667,9 +2663,7 @@
         "date": "2016-02-19",
         "month": "February",
         "year": "2016",
-        "tags": [
-            "自拍"
-        ],
+        "tags": [],
         "groupName": "201602",
         "category": "screenshot",
         "weibo": "",
