@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noai, noimageai" />
+    <meta
+      name="copyright"
+      content="Content curation and organization © 2025 CanadaXFX. Unauthorized AI training prohibited."
+    />
+    <title>Xiao Zhan Weibo Archive | 肖战微博存档</title>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QP979YZW73"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-QP979YZW73");
+    </script>
+    <style>
+      /* --- CORE STYLES FROM SAMPLE --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        color: #333;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        text-align: center;
+        padding: 16px 0;
+        color: white;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .subtitle {
+        font-size: 0.8rem;
+        opacity: 1;
+      }
+
+      /* Navigation Buttons */
+      .nav-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 10px 0 12px;
+      }
+      .nav-btn,
+      .btn {
+        padding: 15px 15px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .nav-btn.active,
+      .btn.primary {
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(238, 90, 36, 0.3);
+      }
+      .nav-btn:not(.active) {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        backdrop-filter: blur(10px);
+      }
+      .nav-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Content Sections */
+      .content-section {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+      .hidden {
+        display: none !important;
+      }
+
+      /* Search */
+      .search-bar {
+        width: 100%;
+        max-width: 400px;
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 25px;
+        font-size: 14px;
+        margin: 0 auto 20px;
+        display: block;
+        transition: border-color 0.3s ease;
+      }
+      .search-bar:focus {
+        outline: none;
+        border-color: #667eea;
+      }
+
+      /* Stats Grid */
+      .stats-grid {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        max-width: 740px;
+        margin: 0 auto 15px;
+      }
+
+      .stat-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 10px 12px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        min-width: 110px;
+        flex: 1;
+        max-width: 200px;
+      }
+      .stat-number {
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      .stat-label {
+        font-size: 12px;
+        opacity: 0.9;
+      }
+
+      /* Timeline Styles */
+      .timeline-container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .timeline-year {
+        margin-bottom: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        background: white;
+      }
+      .timeline-year-header {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        padding: 15px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        user-select: none;
+        position: relative;
+      }
+      .timeline-year-header::after {
+        content: "Click thumbnails for high-res • 点击缩略图打开高清图";
+        position: absolute;
+        bottom: 5px;
+        left: 20px;
+        font-size: 11px;
+        opacity: 0.8;
+        font-weight: normal;
+        font-style: italic;
+      }
+      .timeline-year-header:hover {
+        background: linear-gradient(45deg, #5a6fd8, #6a42a0);
+        transform: translateY(-1px);
+      }
+      .year-header-content {
+        width: 100%;
+      }
+      .year-header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .year-title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .year-preview {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        margin-top: 8px;
+        opacity: 0.9;
+      }
+      .timeline-year.expanded .year-preview {
+        display: none;
+      }
+      .preview-thumb {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+      }
+      .timeline-year-count {
+        font-size: 14px;
+        opacity: 0.9;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 5px 12px;
+        border-radius: 20px;
+      }
+      .expand-icon {
+        font-size: 12px;
+        transition: transform 0.3s ease;
+        margin-left: 10px;
+      }
+      .timeline-year.expanded .expand-icon {
+        transform: rotate(180deg);
+      }
+      .timeline-year-content {
+        padding: 20px;
+        background: white;
+        display: none;
+      }
+      .timeline-year.expanded .timeline-year-content {
+        display: block;
+      }
+
+      .year-controls {
+          display: flex;
+          justify-content: flex-end; /* ALIGNS TO THE RIGHT */
+          align-items: center;
+          margin-bottom: 10px; /* ADDED SPACING ABOVE GRID */
+          gap: 10px;
+          padding: 0 0px;
+      }
+      .year-controls label {
+          font-size: 13px;
+          font-weight: 600;
+          color: #555;
+      }
+      .year-controls select {
+          padding: 6px 6px;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          background-color: #f8f9fa;
+          font-size: 13px;
+          cursor: pointer;
+      }
+
+      /* Photo Grid */
+      .year-photos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 12px;
+        margin-bottom: 15px;
+      }
+      .timeline-photo {
+        aspect-ratio: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        background: #f0f0f0;
+      }
+      .timeline-photo:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .timeline-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      .photo-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        color: white;
+        padding: 10px 8px 6px;
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      /* Modal Styles */
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        padding: 5px;
+        overflow: hidden;
+      }
+      .modal-content {
+        background: white;
+        border-radius: 15px;
+        max-width: 700px;
+        max-height: 90vh;
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+        border-bottom: 1px solid #e0e0e0;
+        background: #f8f9fa;
+        border-radius: 15px 15px 0 0;
+        flex-shrink: 0;
+      }
+      .group-title {
+        font-weight: 600;
+        color: #333;
+        font-size: 14px;
+        flex: 1;
+        text-align: center;
+      }
+      .photo-counter {
+        font-weight: 600;
+        color: #667eea;
+        font-size: 12px;
+        min-width: 60px;
+      }
+      .close-modal {
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+        padding: 0 10px;
+        transition: color 0.3s;
+      }
+      .modal-photo-container {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        background: #000;
+        min-height: 350px;
+        max-height: 60vh;
+        height: 60vh;
+      }
+      .modal-photo {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .modal-tag-pill {
+        font-size: 11px;
+        padding: 4px 12px;
+        background-color: #f0f2f5;
+        color: #555;
+        border-radius: 15px;
+        border: 1px solid #e4e6eb;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+      }
+
+      /* Nav Arrows */
+      .nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav-arrow.prev {
+        left: 20px;
+      }
+      .nav-arrow.next {
+        right: 20px;
+      }
+
+      /* Thumb Strip */
+      .thumbnail-strip {
+        padding: 15px 20px;
+        background: #f8f9fa;
+        border-top: 1px solid #e0e0e0;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 0 0 15px 15px;
+        min-height: 80px;
+        flex-shrink: 0;
+      }
+      .thumbnail-container {
+        display: inline-flex;
+        gap: 10px;
+      }
+      .thumbnail {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        flex-shrink: 0;
+      }
+      .thumbnail.active {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.3);
+      }
+
+      /* Info Panel */
+      .photo-info-panel {
+        padding: 8px 10px;
+        background: white;
+        border-top: 1px solid #e0e0e0;
+        flex-shrink: 0;
+      }
+      .download-actions-row {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5px;
+      }
+      .action-btn {
+        flex: 1;
+        min-width: 160px;
+        max-width: 200px;
+        padding: 8px 10px;
+        border: none;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        display: inline-block;
+      }
+      .download-btn {
+        background: linear-gradient(45deg, #4caf50, #45a049);
+      }
+      .weibo-btn {
+        background: linear-gradient(45deg, #fa2a55, #e91e63);
+      }
+
+      /* --- EXACT FOOTER CSS COPY --- */
+      .site-footer {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 10px 0;
+        margin-top: 50px;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+      .footer-content {
+        margin-bottom: 10px;
+      }
+      .footer-link {
+        color: white;
+        text-decoration: underline;
+        font-weight: 600;
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        margin: 0 8px;
+      }
+      .footer-link:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+      #terms-content {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        margin: 15px auto 0;
+        text-align: left;
+        max-width: 700px;
+        padding: 15px 20px;
+        display: none;
+      }
+      #terms-content ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin: 10px 0;
+      }
+      #terms-content li {
+        margin: 5px 0;
+      }
+      .copyright-notice {
+        opacity: 0.9;
+        margin-top: 10px;
+        font-size: 0.8rem;
+      }
+
+      /* Pagination & Loading */
+      .pagination-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      /* Overriding generic .btn styles specifically for pagination */
+      .pagination-nav .btn {
+        min-width: 40px;
+        padding: 8px 12px;
+        font-size: 13px;
+        background: rgba(255, 255, 255, 0.2);
+        color: #667eea;
+        border: 1px solid #667eea;
+        border-radius: 8px; /* Slightly rounded squares like sample */
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+      }
+      .pagination-nav .btn:hover {
+        background: #e9eafc;
+        transform: translateY(-2px);
+      }
+      .pagination-nav .btn.primary,
+      .pagination-nav .btn[disabled] {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        transform: none;
+        cursor: default;
+        border: none;
+        opacity: 1;
+        box-shadow: none;
+      }
+      .pagination-nav span {
+        color: #555;
+        padding: 0 5px;
+        font-weight: 600;
+      }
+
+      /* Jump to Page Styles */
+      .jump-to-page {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-left: 15px;
+      }
+      .jump-to-page input {
+        width: 70px;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        text-align: center;
+        font-size: 13px;
+        outline: none;
+      }
+      .jump-to-page input:focus {
+        border-color: #667eea;
+      }
+
+      #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        color: #e53e3e;
+        width: 80px;
+        height: 90x;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 9999;
+        border: 1px solid #e53e3e;
+        font-size: 40px;
+        font-weight: 600;
+        -webkit-text-stroke: 2px #e53e3e;
+        text-stroke: 2px #e53e3e;
+        padding: 4px 4px;
+      }
+      #back-to-top .arrow {
+        line-height: 1;
+      }
+      #back-to-top .text {
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 0px;
+        text-align: center;
+        line-height: 1;
+        color: #e53e3e;
+        -webkit-text-stroke: 0;
+        text-stroke: 0;
+        -webkit-text-fill-color: #e53e3e;
+        position: relative;
+        z-index: 1;
+      }
+
+      #back-to-top.visible {
+        opacity: 0.85;
+        visibility: visible;
+        animation: subtle-pulse-white 2s infinite ease-in-out;
+      }
+      #back-to-top:hover {
+        transform: scale(1.15);
+        box-shadow: 0 6px 25px rgba(229, 62, 62, 0.4);
+        opacity: 1;
+      }
+
+      @keyframes subtle-pulse-white {
+        0%,
+        100% {
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        50% {
+          box-shadow: 0 4px 20px rgba(229, 62, 62, 0.3);
+        }
+      }
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+        .nav-buttons {
+          gap: 15px;
+        }
+        .nav-btn {
+          padding: 10px 12px;
+          font-size: 13px;
+        }
+        .year-photos-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+        }
+        .stats-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+        }
+        .timeline-year-header {
+          padding: 12px 15px;
+          font-size: 14px;
+        }
+        .timeline-year-header::after {
+          font-size: 10px;
+          left: 15px;
+          bottom: 4px;
+        }
+        .year-header-top {
+          margin-bottom: 8px;
+        }
+        .year-title {
+          font-size: 14px;
+        }
+        .timeline-year-count {
+          font-size: 12px;
+          padding: 4px 10px;
+        }
+        .preview-thumb {
+          width: 28px;
+          height: 28px;
+        }
+        .preview-more {
+          padding: 4px 8px;
+          font-size: 10px;
+        }
+        .timeline-year-content {
+          padding: 15px;
+        }
+        #back-to-top {
+          bottom: 30px;
+          right: 10px;
+          width: 63px;
+          height: 63x;
+          line-height: 43px;
+          font-size: 23px;
+        }
+        .search-results-header h3 {
+          font-size: 1.2rem;
+        }
+        .clear-search-btn {
+          padding: 10px 20px;
+          font-size: 13px;
+        }
+        .game-stats {
+          flex-wrap: nowrap;
+          gap: 8px;
+          margin: 15px 0;
+        }
+        .stat {
+          padding: 10px 12px;
+          font-size: 12px;
+          border-radius: 10px;
+          flex: 1;
+          text-align: center;
+          min-width: 0;
+        }
+
+        /* Mobile Modal Optimizations */
+        .modal {
+          padding: 5px;
+          align-items: flex-start;
+          padding-top: 5px;
+        }
+
+        .modal-content {
+          max-width: 95vw;
+          max-height: 98vh;
+          margin-top: 0;
+        }
+
+        .modal-header {
+          padding: 12px 15px;
+          flex-shrink: 0;
+        }
+
+        .group-title {
+          font-size: 14px;
+          margin: 0 10px;
+        }
+
+        .photo-counter {
+          font-size: 12px;
+          min-width: 50px;
+        }
+
+        /* Key change: Limit photo container height on mobile */
+        .modal-photo-container {
+          flex: none;
+          height: 35vh;
+          min-height: 200px;
+          max-height: 300px;
+          flex-shrink: 0;
+        }
+
+        .modal-photo {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        .nav-arrow {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+        }
+
+        .nav-arrow.prev {
+          left: 10px;
+        }
+
+        .nav-arrow.next {
+          right: 10px;
+        }
+
+        .thumbnail-strip {
+          padding: 8px 10px;
+          min-height: 50px;
+          flex-shrink: 0;
+        }
+
+        .thumbnail {
+          width: 40px;
+          height: 40px;
+        }
+
+        .photo-info-panel {
+          padding: 12px 15px;
+          flex-shrink: 0;
+          max-height: none;
+          overflow-y: visible;
+        }
+
+        .download-section {
+          padding: 8px;
+          margin-top: 0px;
+        }
+
+        .download-section h4 {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+        .action-btn {
+          padding: 5px 8px;
+          font-size: 12px;
+          min-width: 170px;
+        }
+
+        .download-hint {
+          font-size: 10px;
+          margin: 6px 0 8px;
+        }
+
+        .weibo-section {
+          padding: 10px;
+          margin-top: 10px;
+        }
+
+        .weibo-photo-info {
+          font-size: 11px;
+          margin-bottom: 6px;
+        }
+
+        .weibo-link-btn {
+          padding: 8px 16px !important;
+          font-size: 12px !important;
+        }
+
+        .close-modal {
+          font-size: 40px;
+        }
+      }
+
+      /* Extra small screens */
+      @media (max-width: 480px) {
+        .modal {
+          padding: 2px;
+          padding-top: 5px;
+        }
+
+        .modal-content {
+          padding: 5px;
+          border-radius: 10px;
+          max-height: 95vh;
+        }
+
+        .download-section h4 {
+          font-size: 13px;
+        }
+
+        .weibo-photo-info {
+          font-size: 10px;
+        }
+      }
+
+      /* Very short screens (Nest Hub, landscape phones, etc.) */
+      @media (max-height: 600px) {
+        .modal {
+          align-items: flex-start;
+          padding: 5px;
+          padding-top: 5px;
+        }
+
+        .modal-content {
+          max-height: 98vh;
+          overflow-y: auto;
+          height: auto;
+        }
+
+        /* Make photo container smaller on very short screens */
+        .modal-photo-container {
+          height: 25vh !important;
+          min-height: 150px !important;
+          max-height: 200px !important;
+          flex: none;
+        }
+
+        .modal-header {
+          padding: 8px 12px;
+          flex-shrink: 0;
+        }
+
+        .thumbnail-strip {
+          padding: 8px 8px;
+          min-height: 50px;
+        }
+
+        .thumbnail {
+          width: 35px;
+          height: 35px;
+        }
+
+        .photo-info-panel {
+          padding: 10px 12px;
+          flex-shrink: 0;
+        }
+
+        .download-section {
+          padding: 10px;
+        }
+
+        .download-section h4 {
+          font-size: 13px;
+          margin-bottom: 8px;
+        }
+
+        .action-btn {
+          padding: 8px 10px;
+          font-size: 12px;
+          line-height: 1.1;
+        }
+      }
+
+      /* Extremely short screens (like Nest Hub) */
+      @media (max-height: 480px) {
+        .modal-photo-container {
+          height: 20vh !important;
+          min-height: 120px !important;
+          max-height: 150px !important;
+        }
+
+        .modal-header {
+          padding: 6px 10px;
+        }
+
+        .group-title {
+          font-size: 12px;
+        }
+
+        .photo-counter {
+          font-size: 11px;
+        }
+
+        .thumbnail-strip {
+          padding: 6px 10px;
+          min-height: 40px;
+        }
+
+        .thumbnail {
+          width: 30px;
+          height: 30px;
+        }
+
+        .photo-info-panel {
+          padding: 8px 10px;
+        }
+
+        .download-section h4 {
+          font-size: 12px;
+          margin-bottom: 6px;
+        }
+
+        .action-btn {
+          padding: 6px 6px;
+          font-size: 12px;
+          min-width: 120px;
+        }
+
+        .nav-arrow {
+          width: 35px;
+          height: 35px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Xiao Zhan Weibo Archive<br />肖战微博存档</h1>
+        <p
+          class="subtitle"
+          style="font-weight: 600; color: white; line-height: 1.8"
+        >
+          * Record of XZ Weibo Posts & Attached Images<br />
+          *
+          <a
+            href="https://xz-studio-gallery.com/"
+            target="_blank"
+            style="color: white; text-decoration: underline"
+            >Click here for XZ Studio Gallery 肖战工作室高清图库</a
+          ><br />
+          *
+          <a
+            href="https://canadaxfx.github.io/XZ-HD-Gallery-Misc/"
+            target="_blank"
+            style="color: white; text-decoration: underline"
+            >Click here for XZ HD Gallery Misc 肖战高清图库-其他</a
+          ><br />
+        </p>
+      </header>
+
+      <nav class="nav-buttons">
+        <button
+          class="nav-btn active"
+          data-section="screenshot"
+          onclick="switchTab('screenshot')"
+        >
+          Weibo Screenshots<br />微博截图
+        </button>
+        <button
+          class="nav-btn"
+          data-section="attached"
+          onclick="switchTab('attached')"
+        >
+          Attached Photos<br />微博附图
+        </button>
+      </nav>
+
+      <div class="content-section">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" id="totalPhotosDisplay">0</div>
+            <div class="stat-label">Items</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="yearsSpanDisplay">0</div>
+            <div class="stat-label">Years</div>
+          </div>
+        </div>
+
+<input
+            type="text"
+            class="search-bar"
+            placeholder="Search by tags, date, or note"
+            id="searchInput"
+        />
+        <button
+            class="btn primary hidden"
+            id="clearSearchBtn"
+            onclick="clearSearch()"
+            style="display: block; margin: 0 auto 20px; max-width: 400px;"
+        >
+            Clear Search / 返回
+        </button>
+
+        <div id="timelineContainer" class="timeline-container">
+          <div class="timeline-empty">
+            <h3>Loading Archive...</h3>
+            <p>Organizing items by year.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="photoModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="photo-counter" id="photoCounter">1 / 1</div>
+          <div class="group-title" id="groupTitle">Collection</div>
+          <button class="close-modal" onclick="closeModal()">&times;</button>
+        </div>
+
+        <div class="modal-photo-container">
+          <button
+            class="nav-arrow prev"
+            id="prevBtn"
+            onclick="navigatePhoto(-1)"
+          >
+            ‹
+          </button>
+          <img id="modalPhoto" class="modal-photo" alt="Current photo" />
+          <video
+            id="modalVideo"
+            class="modal-photo hidden"
+            controls
+            playsinline
+            loop
+          ></video>
+          <button
+            class="nav-arrow next"
+            id="nextBtn"
+            onclick="navigatePhoto(1)"
+          >
+            ›
+          </button>
+        </div>
+
+        <div class="thumbnail-strip">
+          <div class="thumbnail-container" id="thumbnailContainer"></div>
+        </div>
+
+        <div class="photo-info-panel">
+          <div
+            id="modalTags"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 8px;
+              justify-content: center;
+              margin-bottom: 15px;
+              padding: 0 5px;
+            "
+          ></div>
+          <div class="download-actions-row">
+            <a
+              class="action-btn download-btn"
+              id="downloadBtn"
+              href="#"
+              target="_blank"
+              download
+            >
+              💾 Download HD<br /><small>下载原图</small>
+            </a>
+            <a class="action-btn weibo-btn" id="weiboLinkBtn" target="_blank">
+              📱 View on Weibo<br /><small>查看原贴 (若可见)</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="back-to-top">
+      <div class="arrow">▲</div>
+      <div class="text">TOP<br />回顶部</div>
+    </div>
+
+    <div id="reportModal" class="modal hidden">
+      <div class="modal-content" style="max-width: 500px">
+        <button class="close-modal" onclick="closeReportModal()">
+          &times;
+        </button>
+        <div class="report-form-container" style="padding: 10px">
+          <div style="text-align: center; margin-bottom: 20px">
+            <h3 style="color: #667eea; margin-bottom: 10px">
+              🔧 Report an Issue
+            </h3>
+            <p style="color: #666; font-size: 14px">
+              Help us by reporting bugs or broken links<br />
+              <span style="font-size: 12px; color: #888"
+                >帮助我们改进网站，报告错误或失效链接</span
+              >
+            </p>
+          </div>
+
+          <form
+            id="reportForm"
+            class="report-form"
+            action="https://formsubmit.co/canadaxfx1005@gmail.com"
+            method="POST"
+          >
+            <input type="text" name="_honey" style="display: none" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://canadaxfx.github.io/XZ-photo-gallery/report-success.html"
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="XZ Gallery Issue Report"
+            />
+
+            <div style="margin-bottom: 10px">
+              <label
+                for="reportType"
+                style="
+                  display: block;
+                  font-size: 13px;
+                  font-weight: 600;
+                  color: #444;
+                  margin-bottom: 5px;
+                "
+                >Issue Type 问题类型</label
+              >
+              <select
+                id="reportType"
+                name="issue_type"
+                required
+                style="
+                  padding: 5px;
+                  border: 1px solid #ccc;
+                  border-radius: 8px;
+                  font-size: 14px;
+                  width: 100%;
+                "
+              >
+                <option value="">Select issue type...</option>
+                <option value="broken-link">Broken Link 链接失效</option>
+                <option value="missing-photo">Missing Photo 图片丢失</option>
+                <option value="other">Other 其他</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: 10px">
+              <label
+                for="reportDescription"
+                style="
+                  display: block;
+                  font-size: 13px;
+                  font-weight: 600;
+                  color: #444;
+                  margin-bottom: 5px;
+                "
+                >Description 详细描述</label
+              >
+              <textarea
+                id="reportDescription"
+                name="description"
+                rows="4"
+                placeholder="Please describe the issue..."
+                required
+                style="
+                  padding: 5px;
+                  border: 1px solid #ccc;
+                  border-radius: 8px;
+                  font-size: 14px;
+                  width: 100%;
+                "
+              ></textarea>
+            </div>
+
+            <div style="margin-bottom: 10px">
+              <label
+                for="reportEmail"
+                style="
+                  display: block;
+                  font-size: 13px;
+                  font-weight: 600;
+                  color: #444;
+                  margin-bottom: 5px;
+                "
+                >Your Email (Optional)</label
+              >
+              <input
+                type="email"
+                id="reportEmail"
+                name="user_email"
+                placeholder="your@email.com"
+                style="
+                  padding: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 8px;
+                  font-size: 14px;
+                  width: 100%;
+                "
+              />
+              <input type="hidden" id="reportDevice" name="device_browser" />
+            </div>
+
+            <div
+              class="form-actions"
+              style="
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #eee;
+              "
+            >
+              <button
+                type="button"
+                class="nav-btn"
+                style="background: #f8f8f8; color: #666; border: 1px solid #ddd"
+                onclick="closeReportModal()"
+              >
+                Cancel
+              </button>
+              <button type="submit" class="btn primary">Send Report</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="back-to-top">
+      <div class="arrow">▲</div>
+      <div class="text">TOP<br />回顶部</div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div style="margin-bottom: 10px; font-weight: 700">Explore more</div>
+        <a
+          class="footer-link"
+          href="https://canadaxfx.github.io/XZworks/"
+          target="_blank"
+          rel="noopener"
+          >Screen Arts of Xiao Zhan</a
+        >
+        <a
+          class="footer-link"
+          href="https://www.youtube.com/@CanadaXFX"
+          target="_blank"
+          rel="noopener"
+          >CanadaXFX YouTube Channel</a
+        >
+      </div>
+
+      <div
+        class="footer-content"
+        style="
+          margin-top: 20px;
+          padding-top: 10px;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+        "
+      >
+        <a
+          class="footer-link"
+          href="#"
+          onclick="openReportModal(); return false;"
+        >
+          🔧 Report Broken Links or Bugs<br />
+          <small style="font-size: 11px; opacity: 0.8; font-weight: normal"
+            >报告错误链接或功能问题</small
+          >
+        </a>
+      </div>
+
+      <div class="copyright-notice">
+        &copy; 2025 CanadaXFX. All rights reserved.
+      </div>
+
+      <a href="#" id="terms-toggle" class="footer-link">Terms of Use</a>
+      <div id="terms-content">
+        <ul>
+          <li>
+            All images and content related to Xiao Zhan belong to their
+            respective copyright owners.
+          </li>
+          <li>
+            All content on this site is curated and organized © 2025 CanadaXFX.
+          </li>
+          <li>AI training is strictly prohibited.</li>
+          <li>
+            The original content, design, and code of this website may not be
+            reproduced, distributed, or used without explicit permission.
+          </li>
+          <li>Personal and non-commercial use only.</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      // --- VARIABLES ---
+      let allData = [];
+      let activeData = [];
+      let currentTab = "screenshot";
+      let expandedYears = new Set();
+      let paginationState = {};
+      let imageObserver = null;
+      let currentGroupPhotos = [];
+      let currentPhotoIndex = 0;
+
+      // --- SETUP ---
+      document.addEventListener("DOMContentLoaded", () => {
+        loadAllData();
+        setupIntersectionObserver();
+        setupSearch();
+        setupBackToTop();
+        setupFooterToggle(); // Restored footer toggle
+        setupBackToTop();
+      });
+
+      // --- FOOTER & REPORT FUNCTIONS (COPIED EXACTLY) ---
+      function setupFooterToggle() {
+        const termsToggle = document.getElementById("terms-toggle");
+        if (!termsToggle) return;
+        termsToggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const termsContent = document.getElementById("terms-content");
+          const isHidden =
+            termsContent.style.display === "none" ||
+            !termsContent.style.display;
+          termsContent.style.display = isHidden ? "block" : "none";
+          if (isHidden)
+            termsContent.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
+
+      function openReportModal() {
+        document.getElementById("reportModal").classList.remove("hidden");
+        const deviceInfo = `${navigator.platform} - ${navigator.userAgent.split(" ").slice(-2).join(" ")}`;
+        const deviceInput = document.getElementById("reportDevice");
+        if (deviceInput) deviceInput.value = deviceInfo;
+      }
+
+      function closeReportModal() {
+        document.getElementById("reportModal").classList.add("hidden");
+        document.getElementById("reportForm").reset();
+      }
+
+      // --- DATA LOADING & TABS ---
+      async function loadAllData() {
+        const files = [
+          2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016,
+        ];
+        let combined = [];
+
+        for (let f of files) {
+          try {
+            const res = await fetch(`${f}.json?v=${Date.now()}`);
+            if (res.ok) {
+              const json = await res.json();
+              if (Array.isArray(json)) combined.push(...json);
+            }
+          } catch (e) {
+            console.log(`Skipped ${f}.json`);
+          }
+        }
+
+        // --- FIX: FORCE YEAR FROM DATE STRING ---
+        combined.forEach((item, idx) => {
+          item._uid = idx;
+          // This line grabs the first 4 characters of "YYYY-MM-DD"
+          // It ignores Timezones and ignores the 'year' field in the JSON
+          if (item.date && item.date.length >= 4) {
+            item.year = item.date.substring(0, 4);
+          }
+        });
+
+        // --- FIX: STRING SORTING ---
+        // Uses text comparison instead of Date objects to avoid timezone shifts
+        combined.sort((a, b) => b.date.localeCompare(a.date));
+
+        allData = combined;
+        switchTab("screenshot");
+      }
+
+      function switchTab(tabName) {
+        currentTab = tabName;
+        document.querySelectorAll(".nav-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.section === tabName);
+        });
+        if (tabName === "screenshot") {
+          activeData = allData.filter((item) => item.category === "screenshot");
+        } else {
+          activeData = allData.filter(
+            (item) => item.category === "attached" || !item.category,
+          );
+        }
+        expandedYears.clear();
+        paginationState = {};
+        document.getElementById("searchInput").value = "";
+        updateStats();
+        renderTimeline();
+        if (activeData.length > 0) {
+          const years = [...new Set(activeData.map((d) => d.year))]
+            .sort()
+            .reverse();
+          if (years.length) toggleYear(years[0]);
+        }
+      }
+
+
+function clearSearch() {
+  const input = document.getElementById("searchInput");
+  input.value = "";
+  document.getElementById("clearSearchBtn").classList.add("hidden");
+  // Reset pagination state to prevent issues when switching tabs after clearing a search
+  paginationState = {}; 
+  renderTimeline(activeData); // Render the full, unfiltered data
+}
+
+      // Helper function to generate pagination HTML (From Sample)
+      function createPaginationHTML(year, currentPage, totalPages) {
+        let html = "";
+        const maxPagesToShow = 5;
+        let startPage, endPage;
+
+        if (totalPages <= maxPagesToShow) {
+          startPage = 1;
+          endPage = totalPages;
+        } else {
+          const maxBefore = Math.floor(maxPagesToShow / 2);
+          const maxAfter = Math.ceil(maxPagesToShow / 2) - 1;
+          if (currentPage <= maxBefore) {
+            startPage = 1;
+            endPage = maxPagesToShow;
+          } else if (currentPage + maxAfter >= totalPages) {
+            startPage = totalPages - maxPagesToShow + 1;
+            endPage = totalPages;
+          } else {
+            startPage = currentPage - maxBefore;
+            endPage = currentPage + maxAfter;
+          }
+        }
+
+        // Prev Button
+        if (currentPage > 1) {
+          html += `<button class="btn" onclick="goToPage('${year}', ${currentPage - 1})">‹ Prev</button>`;
+        } else {
+          html += `<button class="btn" disabled>‹ Prev</button>`;
+        }
+
+        // First Page + Ellipsis
+        if (startPage > 1) {
+          html += `<button class="btn" onclick="goToPage('${year}', 1)">1</button>`;
+          if (startPage > 2) html += `<span>...</span>`;
+        }
+
+        // Numbered Buttons
+        for (let i = startPage; i <= endPage; i++) {
+          const isCurrent = i === currentPage;
+          html += `<button class="btn ${isCurrent ? "primary" : ""}" ${isCurrent ? "disabled" : `onclick="goToPage('${year}', ${i})"`}>${i}</button>`;
+        }
+
+        // Last Page + Ellipsis
+        if (endPage < totalPages) {
+          if (endPage < totalPages - 1) html += `<span>...</span>`;
+          html += `<button class="btn" onclick="goToPage('${year}', ${totalPages})">${totalPages}</button>`;
+        }
+
+        // Next Button
+        if (currentPage < totalPages) {
+          html += `<button class="btn" onclick="goToPage('${year}', ${currentPage + 1})">Next ›</button>`;
+        } else {
+          html += `<button class="btn" disabled>Next ›</button>`;
+        }
+
+        // Jump Input
+        html += `
+                <div class="jump-to-page">
+                    <input type="number" min="1" max="${totalPages}" placeholder="Page #" 
+                        onkeypress="if(event.key==='Enter') goToPage('${year}', this.value)">
+                    <button class="btn" onclick="goToPage('${year}', this.previousElementSibling.value)">Go</button>
+                </div>
+            `;
+
+        return html;
+      }
+
+// --- RENDERING ---
+function renderTimeline(dataToRender = activeData) {
+    const container = document.getElementById("timelineContainer");
+    if (dataToRender.length === 0) {
+        container.innerHTML = `<div class="timeline-empty"><h3>No Items Found</h3><p>Try a different tab or search.</p></div>`;
+        return;
+    }
+    
+    // CHANGE 1: Use the dataToRender (which contains search results)
+    const grouped = dataToRender.reduce((acc, item) => {
+        if (!acc[item.year]) acc[item.year] = [];
+        acc[item.year].push(item);
+        return acc;
+    }, {});
+    
+    const sortedYears = Object.keys(grouped).sort((a, b) => b - a);
+
+    container.innerHTML = sortedYears
+        .map((year) => {
+            const items = grouped[year];
+            const count = items.length;
+            const previewHtml = items
+              .slice(0, 4)
+              .map(
+                (p) =>
+                  `<img src="${getThumbUrl(p.url)}" class="preview-thumb">`,
+              )
+              .join("");
+            const isExpanded = expandedYears.has(year);
+
+            // The year element now needs to store the IDs of the photos that matched the search
+            const photoUids = items.map(item => item._uid).join(',');
+
+            return `
+                <div class="timeline-year ${isExpanded ? "expanded" : ""}" data-year="${year}">
+                    <div class="timeline-year-header" onclick="toggleYear('${year}')">
+                        <div class="year-header-content">
+                            <div class="year-header-top">
+                                <span class="year-title">${year}</span>
+                                <div style="display:flex; align-items:center; gap:10px;">
+                                    <span class="timeline-year-count">${count} items</span>
+                                    <span class="expand-icon">▼</span>
+                                </div>
+                            </div>
+                            <div class="year-preview">${previewHtml}</div>
+                        </div>
+                    </div>
+                    <div class="timeline-year-content" data-photo-uids="${photoUids}">
+                        <div class="year-controls">
+                            <select onchange="changePerPage('${year}', this.value)">
+                                <option value="21">21 / page</option>
+                                <option value="42">42 / page</option>
+                                <option value="all">Show All</option>
+                            </select>
+                        </div>
+                        <div class="year-photos-grid" id="grid-${year}"></div>
+                        <div class="pagination-nav" id="nav-${year}"></div>
+                    </div>
+                </div>`;
+          })
+          .join("");
+
+        // CHANGE 2: If a year is expanded, render its content using the *grouped* data.
+        sortedYears.forEach((y) => {
+            if (expandedYears.has(y)) {
+                renderYearContent(y, grouped[y]); // Pass the specific search results for this year
+            }
+        });
+}
+
+function toggleYear(year) {
+    const el = document.querySelector(
+      `.timeline-year[data-year="${year}"]`,
+    );
+    if (!el) return;
+    if (expandedYears.has(year)) {
+      expandedYears.delete(year);
+      el.classList.remove("expanded");
+    } else {
+      expandedYears.add(year);
+      el.classList.add("expanded");
+      
+      // FIX: Get the UIDs of the photos that matched the current search
+      const contentEl = el.querySelector('.timeline-year-content');
+      const uidsString = contentEl.dataset.photoUids;
+      
+      let itemsToRender = null;
+      if (uidsString) {
+          const uids = uidsString.split(',').map(u => parseInt(u, 10));
+          // Re-filter the active data based on the UIDs stored during the search
+          itemsToRender = activeData.filter(item => uids.includes(item._uid));
+      }
+
+      renderYearContent(year, itemsToRender);
+    }
+    updateStats();
+}
+
+function renderYearContent(year, itemsToRender = null) {
+    
+    // FIX: Use itemsToRender if provided (from search), otherwise, filter from activeData
+    const items = itemsToRender || activeData.filter((i) => i.year === year);
+    
+    const state = paginationState[year] || { page: 1, limit: 21 };
+    paginationState[year] = state;
+    const grid = document.getElementById(`grid-${year}`);
+    const nav = document.getElementById(`nav-${year}`);
+
+    let displayItems = items;
+    let totalPages = 1;
+    if (state.limit !== "all") {
+        const limit = parseInt(state.limit);
+        totalPages = Math.ceil(items.length / limit);
+        const start = (state.page - 1) * limit;
+        displayItems = items.slice(start, start + limit);
+    }
+
+        grid.innerHTML = displayItems
+          .map((item) => {
+            const isVideo = item.url.match(/\.(mp4|mov)$/i);
+            return `
+                <div class="timeline-photo" onclick="openModal(${item._uid})">
+                    ${isVideo ? '<div style="position:absolute;top:5px;right:5px;background:#000;color:white;border-radius:50%;width:20px;height:20px;text-align:center;line-height:20px;font-size:10px;opacity:0.7">▶</div>' : ""}
+                    <img data-src="${getThumbUrl(item.url)}" class="lazy-image loading-placeholder">
+                    <div class="photo-overlay">${item.date}</div>
+                </div>`;
+          })
+          .join("");
+
+        if (state.limit !== "all" && totalPages > 1) {
+          nav.innerHTML =
+            `<div class="pagination-nav">` +
+            createPaginationHTML(year, state.page, totalPages) +
+            `</div>`;
+        } else {
+          nav.innerHTML = "";
+        }
+
+        observeImages(); // 1. Trigger lazy loading
+      }
+
+      function changePerPage(year, val) {
+        paginationState[year] = { page: 1, limit: val };
+        renderYearContent(year);
+      }
+
+      function goToPage(year, page) {
+        const items = activeData.filter((i) => i.year === year);
+        const limit = parseInt(paginationState[year].limit);
+        const max = Math.ceil(items.length / limit);
+        page = Math.max(1, Math.min(page, max));
+        paginationState[year].page = page;
+        renderYearContent(year);
+        document
+          .getElementById(`grid-${year}`)
+          .scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function getThumbUrl(fullUrl) {
+        if (fullUrl.includes("/full/"))
+          return fullUrl
+            .replace("/full/", "/thumbs/")
+            .replace(/(\.[^.]+)$/, "_m.jpg");
+        return fullUrl;
+      }
+
+      function updateStats() {
+        document.getElementById("totalPhotosDisplay").textContent =
+          activeData.length;
+        document.getElementById("yearsSpanDisplay").textContent = new Set(
+          activeData.map((d) => d.year),
+        ).size;
+      }
+
+      function setupIntersectionObserver() {
+        imageObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.onload = () => img.classList.remove("loading-placeholder");
+                obs.unobserve(img);
+              }
+            });
+          },
+          { rootMargin: "100px" },
+        );
+      }
+
+      function observeImages() {
+        document.querySelectorAll(".lazy-image").forEach((img) => {
+          if (!img.src) imageObserver.observe(img);
+        });
+      }
+
+function setupSearch() {
+  const input = document.getElementById("searchInput");
+  const clearBtn = document.getElementById("clearSearchBtn"); 
+
+  if (!input.value.trim()) {
+      clearBtn.classList.add("hidden");
+  }
+
+  input.addEventListener("input", (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    
+    if (!term) {
+      clearBtn.classList.add("hidden");
+      renderTimeline(activeData); 
+      return;
+    }
+    
+    clearBtn.classList.remove("hidden"); 
+
+    // Filtering logic
+    const filtered = activeData.filter((item) =>
+      // Check tags with BI-DIRECTIONAL LOGIC
+      (item.tags && 
+      Array.isArray(item.tags) && 
+      item.tags.some((t) => {
+          const lowerTag = t.toLowerCase();
+          const lowerTerm = term; // already lowercased from above
+          
+          // Check if the tag contains the term OR the term contains the tag
+          return lowerTag.includes(lowerTerm) || lowerTerm.includes(lowerTag);
+      })) ||
+      // Check date
+      item.date.includes(term) || 
+      // Check note
+      (item.note && item.note.toLowerCase().includes(term))
+    );
+    
+    renderTimeline(filtered);
+  });
+}
+
+      function setupBackToTop() {
+        const btn = document.getElementById("back-to-top");
+        if (!btn) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            window.requestAnimationFrame(() => {
+              btn.classList.toggle("visible", window.scrollY > 300);
+            });
+          },
+          { passive: true },
+        );
+        btn.addEventListener("click", () =>
+          window.scrollTo({ top: 0, behavior: "smooth" }),
+        );
+      }
+
+      // --- MODAL ---
+      function openModal(uid) {
+        const targetItem = activeData.find((i) => i._uid === uid);
+        if (!targetItem) return;
+        const groupKey =
+          targetItem.groupName || targetItem.year + targetItem.month;
+        currentGroupPhotos = activeData.filter((i) => {
+          const itemKey = i.groupName || i.year + i.month;
+          return itemKey === groupKey;
+        });
+        currentGroupPhotos.sort((a, b) => a.date.localeCompare(b.date));
+        currentPhotoIndex = currentGroupPhotos.findIndex((i) => i._uid === uid);
+        document.getElementById("photoModal").classList.remove("hidden");
+        updateModalView();
+        generateThumbnails();
+        document.addEventListener("keydown", handleKeyNav);
+      }
+
+      function updateModalView() {
+        const photo = currentGroupPhotos[currentPhotoIndex];
+        if (!photo) return;
+        const img = document.getElementById("modalPhoto");
+        const vid = document.getElementById("modalVideo");
+        const isVideo = photo.url.match(/\.(mp4|mov)$/i);
+        if (isVideo) {
+          img.classList.add("hidden");
+          vid.classList.remove("hidden");
+          vid.src = photo.url;
+        } else {
+          vid.classList.add("hidden");
+          vid.pause();
+          img.classList.remove("hidden");
+          img.src = photo.url;
+        }
+        document.getElementById("photoCounter").textContent =
+          `${currentPhotoIndex + 1} / ${currentGroupPhotos.length}`;
+        document.getElementById("groupTitle").textContent =
+          `${photo.date} - ${photo.groupName || ""}`;
+        document.getElementById("downloadBtn").href = photo.url;
+        const wbBtn = document.getElementById("weiboLinkBtn");
+        if (photo.weibo) {
+          wbBtn.href = photo.weibo;
+          wbBtn.style.display = "inline-block";
+        } else {
+          wbBtn.style.display = "none";
+        }
+        const tagsContainer = document.getElementById("modalTags");
+        if (tagsContainer) {
+          // Check if tags exist and are not empty
+          if (
+            photo.tags &&
+            Array.isArray(photo.tags) &&
+            photo.tags.length > 0
+          ) {
+            tagsContainer.innerHTML = photo.tags
+              .map((tag) => `<span class="modal-tag-pill">#${tag}</span>`)
+              .join("");
+            tagsContainer.style.display = "flex";
+          } else {
+            tagsContainer.style.display = "none"; // Hide if no tags
+          }
+        }
+        document
+          .querySelectorAll(".thumbnail")
+          .forEach((t, i) =>
+            t.classList.toggle("active", i === currentPhotoIndex),
+          );
+        const activeThumb = document.querySelector(".thumbnail.active");
+        if (activeThumb)
+          activeThumb.scrollIntoView({ behavior: "smooth", inline: "center" });
+      }
+
+      function generateThumbnails() {
+        document.getElementById("thumbnailContainer").innerHTML =
+          currentGroupPhotos
+            .map(
+              (p, i) => `
+                <img src="${getThumbUrl(p.url)}" class="thumbnail ${i === currentPhotoIndex ? "active" : ""}" onclick="jumpToPhoto(${i})">
+            `,
+            )
+            .join("");
+      }
+
+      function navigatePhoto(dir) {
+        const newIdx = currentPhotoIndex + dir;
+        if (newIdx >= 0 && newIdx < currentGroupPhotos.length) {
+          currentPhotoIndex = newIdx;
+          updateModalView();
+        }
+      }
+
+      function jumpToPhoto(idx) {
+        currentPhotoIndex = idx;
+        updateModalView();
+      }
+
+      function closeModal() {
+        document.getElementById("photoModal").classList.add("hidden");
+        document.getElementById("modalVideo").pause();
+        document.removeEventListener("keydown", handleKeyNav);
+      }
+
+      function handleKeyNav(e) {
+        if (e.key === "ArrowLeft") navigatePhoto(-1);
+        if (e.key === "ArrowRight") navigatePhoto(1);
+        if (e.key === "Escape") closeModal();
+      }
+    </script>
+  </body>
+</html>
